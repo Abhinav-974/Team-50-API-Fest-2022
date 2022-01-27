@@ -5,7 +5,7 @@ info:
 servers:
   - url: 'https://ef550544-465c-43d3-b1d9-07a5f4c09361.mock.pstmn.io'
 paths:
-  /movies:
+  /moviesjnjnjnljnl:
     get:
       summary: 'GetAllMovies'
       operationId: listMovies
