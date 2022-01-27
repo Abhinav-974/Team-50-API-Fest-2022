@@ -1,20 +1,19 @@
 openapi: 3.0.0
 info:
   version: 'v1'
-  title: 'Movies and Shows API skvksn jdbmn jbke njrnp4'
+  title: 'Movies and Shows API'
 servers:
   - url: 'https://ef550544-465c-43d3-b1d9-07a5f4c09361.mock.pstmn.io'
 paths:
-  /moviesjnjnjnljnl:
+  /movies:
     get:
       summary: 'GetAllMovies'
-      operationId: listMoviesbnmnljn; n jlm;
+      operationId: listMovies
       tags:
-        - Movies svnsj ndj n, ndhlb
-      
+        - Movies 
       responses:
         '200':
-          description: 'List of Moviesxcjbkmvxb;dmbkdmb;f'
+          description: 'List of Movies'
           content:
             application/json:
               schema:
@@ -33,6 +32,9 @@ components:
         - certification
         - release_date
         - cast
+        - genre
+        - languages_available
+        - services_available
       properties:
         id:
           type: integer
@@ -46,10 +48,37 @@ components:
         cast:
             type: array
             items:
-            
-                
-                    
-
+                type: object
+                properties:
+                    name:
+                        type: string
+                    id:
+                        type: integer
+                        format: int64  
+        genre:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+                    id:
+                        type: integer
+                        format: int64   
+        languages_available:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+        services_available:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string            
     Error:
       type: object
       required:
