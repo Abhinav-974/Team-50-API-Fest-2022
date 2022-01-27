@@ -18,6 +18,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Movies'
+  /shows:
+    get:
+      summary: 'GetAllShows'
+      operationId: listShows
+      tags:
+        - Shows 
+      responses:
+        '200':
+          description: 'List of Shows'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Shows'
 components:
   schemas:
     Movies:
@@ -78,7 +91,71 @@ components:
                 type: object
                 properties:
                     name:
-                        type: string            
+                        type: string  
+    
+    Shows:
+        type: array
+        items:
+            $ref: "#/components/schemas/Show"
+    Show:
+      type: object
+      required:
+        - id
+        - name
+        - certification
+        - pilot_air_date
+        - num_of_seasons
+        - cast
+        - genre
+        - languages_available
+        - services_available
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        certification:
+          type: string
+        pilot_air_date:
+            type: string
+        num_of_seasons:
+            type: integer
+            format: int64
+        cast:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+                    id:
+                        type: integer
+                        format: int64  
+        genre:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+                    id:
+                        type: integer
+                        format: int64   
+        languages_available:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+        services_available:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string          
     Error:
       type: object
       required:
