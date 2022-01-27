@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: 'v1'
-  title: 'Movies and Shows API'
+  title: 'Movies and Shows API skvksn jdbmn jbke njrnp4'
 servers:
   - url: 'https://ef550544-465c-43d3-b1d9-07a5f4c09361.mock.pstmn.io'
 paths:
