@@ -43,6 +43,9 @@ components:
           type: string
         release_date:
             type: string
+        cast:
+            type: array
+            items:
             
                 
                     
