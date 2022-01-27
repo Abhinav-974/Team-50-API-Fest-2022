@@ -10,7 +10,7 @@ paths:
       summary: 'GetAllMovies'
       operationId: listMovies
       tags:
-        - Movies
+        - Movies svnsj ndj n, ndhlb
       
       responses:
         '200':
