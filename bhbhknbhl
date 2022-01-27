@@ -3,7 +3,7 @@ info:
   version: 'v1'
   title: 'Movies and Shows API'
 servers:
-  - url: 'https://ef550544-465c-43d3-b1d9-07a5f4c09361.mock.pstmn.io'
+  - url: 'https://d40e0072-3ab3-4306-aa16-ac32bbf2f644.mock.pstmn.io'
 paths:
   /movies:
     get:
