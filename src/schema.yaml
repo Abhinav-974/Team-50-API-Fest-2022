@@ -1,0 +1,597 @@
+openapi: 3.0.0
+info:
+  version: 'v1'
+  title: 'Movies and Shows API'
+servers:
+  - url: 'https://07f90488-5a26-4eb8-b43d-173fd46ce2ed.mock.pstmn.io'
+paths:
+  /movies:
+    get:
+      summary: 'Get All Movies'
+      operationId: listMovies
+      tags:
+        - Movies 
+      responses:
+        '200':
+          description: 'List of Movies'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movies'
+
+    post:
+      summary: 'Add Movie'
+      operationId: addMovie
+      requestBody:
+          required: true
+          description: Movie to be added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+      tags:
+        - Movies 
+      responses:
+        '201':
+          description: 'Add a movie'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+
+
+  /shows:
+    get:
+      summary: 'Get All Shows'
+      operationId: listShows
+      tags:
+        - Shows 
+      responses:
+        '200':
+          description: 'List of Shows'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Shows'
+
+    post:
+      summary: 'Add Show'
+      operationId: addShow
+      requestBody:
+          required: true
+          description: Show to be added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Show'
+      tags:
+        - Shows 
+      responses:
+        '201':
+          description: 'Add a show'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Show'
+
+
+  /movies/{movie_id}:
+    get:
+      summary: 'Get Single Movie'
+      operationId: getMovie
+      parameters:
+        - name: movie_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      tags:
+        - Movies
+      responses:
+        '200':
+          description: 'Movie details'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+
+    put:
+      summary: 'Update a Movie'
+      operationId: updateMovie
+      parameters:
+        - name: movie_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      requestBody:
+          required: true
+          description: Movie to be updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+      tags:
+        - Movies
+      responses:
+        '204':
+          description: 'Update a Movie'
+
+    delete:
+      summary: 'Delete a Movie'
+      operationId: deleteMovie
+      parameters:
+        - name: movie_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      tags:
+        - Restaurants
+      responses:
+        '204':
+          description: 'Delete a Movie'
+
+
+  /shows/{show_id}:
+    get:
+      summary: 'Single Show'
+      operationId: getShow
+      parameters:
+        - name: show_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      tags:
+        - Shows
+      responses:
+        '200':
+          description: 'Show details'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Show'
+
+    put:
+      summary: 'Update a Show'
+      operationId: updateShow
+      parameters:
+        - name: show_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      requestBody:
+          required: true
+          description: Show to be updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Show'
+      tags:
+        - Shows
+      responses:
+        '204':
+          description: 'Update a Show'
+
+    delete:
+      summary: 'Delete a Show'
+      operationId: deleteShow
+      parameters:
+        - name: show_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      tags:
+        - Restaurants
+      responses:
+        '204':
+          description: 'Delete a Show'
+
+
+  /movies/{movie_id}/reviews:
+    get:
+      summary: 'Get All Movie Reviews'
+      operationId: listMovieReviews
+      parameters:
+        - name: movie_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      tags:
+        - MovieReviews 
+      responses:
+        '200':
+          description: 'List of Movie Reviews'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reviews'
+
+    post:
+      summary: 'Add Movie Review'
+      operationId: addMovieReview
+      parameters:
+        - name: movie_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      requestBody:
+          required: true
+          description: Movie review to be added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Review'
+      tags:
+        - MovieReviews 
+      responses:
+        '201':
+          description: 'Add a movie review'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Review'
+
+
+  /shows/{show_id}/reviews:
+    get:
+      summary: 'Get All Show Reviews'
+      operationId: listShowReviews
+      parameters:
+        - name: show_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      tags:
+        - ShowReviews 
+      responses:
+        '200':
+          description: 'List of Show Reviews'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reviews'
+
+    post:
+      summary: 'Add Show Review'
+      operationId: addShowReview
+      parameters:
+      - name: show_id
+        in: path
+        description: the unique id
+        required: true
+        schema:
+            type: string
+      requestBody:
+          required: true
+          description: Show review to be added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Review'
+      tags:
+        - ShowReviews 
+      responses:
+        '201':
+          description: 'Add a show review'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Review'
+
+  /movies/{movie_id}/quotes:
+    get:
+      summary: 'Get All Movie Quotes'
+      operationId: listMovieQuotes
+      parameters:
+        - name: movie_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      tags:
+        - MovieQuotes 
+      responses:
+        '200':
+          description: 'List of Movie Quotes'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quotes'
+   
+    post:
+      summary: 'Add Movie Quote'
+      operationId: addMovieQuote
+      parameters:
+        - name: movie_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      requestBody:
+          required: true
+          description: Movie quote to be added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
+      tags:
+        - MovieQuotes 
+      responses:
+        '201':
+          description: 'Add a movie quote'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
+
+
+  /shows/{show_id}/quotes:
+    get:
+      summary: 'Get All Show Quotes'
+      operationId: listShowQuotes
+      parameters:
+        - name: show_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      tags:
+        - ShowQuotes 
+      responses:
+        '200':
+          description: 'List of Show Quotes'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quotes'
+
+    post:
+      summary: 'Add Show Quote'
+      operationId: addShowQuote
+      parameters:
+        - name: show_id
+          in: path
+          description: the unique id
+          required: true
+          schema:
+              type: string
+      requestBody:
+          required: true
+          description: Show quote to be added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
+      tags:
+        - ShowQuotes 
+      responses:
+        '201':
+          description: 'Add a show quote'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
+
+
+  
+components:
+  schemas:
+    Movies:
+        type: array
+        items:
+            $ref: "#/components/schemas/Movie"
+    Movie:
+      type: object
+      required:
+        - movie_id
+        - name
+        - certification
+        - release_date
+        - cast
+        - genre
+        - soundtrack_link
+        - languages_available
+        - services_available
+      properties:
+        movie_id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        certification:
+          type: string
+        release_date:
+            type: string
+        cast:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+                    id:
+                        type: integer
+                        format: int64  
+        genre:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+                    genre_id:
+                        type: integer
+                        format: int64
+        soundtrack_link:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+                    link:
+                        type: string 
+        languages_available:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+        services_available:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string  
+    
+
+    Shows:
+        type: array
+        items:
+            $ref: "#/components/schemas/Show"
+    Show:
+      type: object
+      required:
+        - show_id
+        - name
+        - certification
+        - pilot_air_date
+        - num_of_seasons
+        - cast
+        - genre
+        - soundtrack_link
+        - languages_available
+        - services_available
+      properties:
+        show_id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        certification:
+          type: string
+        pilot_air_date:
+            type: string
+        num_of_seasons:
+            type: integer
+            format: int64
+        cast:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+                    id:
+                        type: integer
+                        format: int64  
+        genre:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+                    id:
+                        type: integer
+                        format: int64 
+        soundtrack_link:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+                    link:
+                        type: string 
+        languages_available:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string
+        services_available:
+            type: array
+            items:
+                type: object
+                properties:
+                    name:
+                        type: string   
+
+
+    Reviews:
+        type: array
+        items:
+            $ref: "#/components/schemas/Review"
+    Review:
+      type: object
+      required:
+        - review_id
+        - description
+        - stars_out_of_5
+      properties:
+        review_id:
+          type: integer
+          format: int64
+        description:
+          type: string
+        stars_out_of_5:
+            type: integer
+            format: int64
+
+    Quotes:
+        type: array
+        items:
+            $ref: "#/components/schemas/Quote"
+    Quote:
+      type: object
+      required:
+        - quote_id
+        - quote
+      properties:
+        quote_id:
+          type: integer
+          format: int64
+        quote:
+          type: string
+        
+        
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+  - BasicAuth: []
