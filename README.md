@@ -3,14 +3,12 @@
 This project is aimed at letting a user find and edit information about movies and shows available, like cast, release dates, genres, reviews etc. We have worked with Node.Js, Fastify, React.Js for the backend and frontend parts respectively. Let's dive in!
 
 The project has two sections - movies and shows. Both have similar set of user interactions with our API!
+![2022-01-29 (8)](https://user-images.githubusercontent.com/57345247/151658684-8fc68558-9ec9-4622-a31b-5b161d215ebf.png)
+![2022-01-29 (9)](https://user-images.githubusercontent.com/57345247/151658682-7368dedc-2a13-46e7-86eb-58ac4a52bb5c.png)
+This is front page with cards and add show and movie buttons
+![2022-01-29 (10)](https://user-images.githubusercontent.com/57345247/151658680-78cab6a4-b3a5-4b9c-a813-b58d3a1e6fda.png)
+![2022-01-29 (11)](https://user-images.githubusercontent.com/57345247/151658677-5fcaee34-c478-4d10-bec7-88eae86cff8e.png)
+These are respective movie and show details page with details
 
-![2022-01-29 (6)](https://user-images.githubusercontent.com/57345247/151656807-d3ef6c36-153c-4513-9538-30e3f4fd6017.png)
 
-![2022-01-29 (5)](https://user-images.githubusercontent.com/57345247/151656813-ce5796fc-9b08-4309-80f9-26d2f45e2606.png)
-
-![2022-01-29 (4)](https://user-images.githubusercontent.com/57345247/151656819-3fb01186-5551-4a8e-b5aa-707fa0753124.png)
-
-![2022-01-29 (3)](https://user-images.githubusercontent.com/57345247/151656823-c427e1a4-8126-4b5e-94fe-328e3b76bcea.png)
-
-![2022-01-29 (2)](https://user-images.githubusercontent.com/57345247/151656824-ffbc7704-4514-4f5e-abe3-7434458de0b5.png)
 
