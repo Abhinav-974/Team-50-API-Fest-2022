@@ -2,19 +2,21 @@ import React from 'react'
 import './MainScreen.css'
 import data1 from '../Data/movies'
 import data2 from '../Data/shows'
-import { Col, Row } from 'react-bootstrap'
+import { Button, Col, Row } from 'react-bootstrap'
 import MovieCard from '../Components/MovieCard'
 import { Link } from 'react-router-dom'
 const MainScreen = () => {
   return (
     <>
       <Row>
-        <Col md={3}>
-          <div className='reviewsSection'>reviews</div>
-        </Col>
         <Col className='p-0'>
           <div className='moviesSection'>
-            <div className='title'>Movies</div>
+            <div className='title'>
+              Movies
+              <Button className='btn btn-warning'>Delete Movie</Button>
+              <Button className='btn btn-warning'>Edit Movie</Button>
+              <Button className='btn btn-warning'>Add Movie</Button>
+            </div>
             <Row className='py-5'>
               {data1.map((movie) => (
                 <Col
@@ -30,7 +32,12 @@ const MainScreen = () => {
                 </Col>
               ))}
             </Row>
-            <div className='title'>Shows</div>
+            <div className='title'>
+              Shows
+              <Button className='btn btn-warning'>Delete Movie</Button>
+              <Button className='btn btn-warning'>Edit Movie</Button>
+              <Button className='btn btn-warning'>Add Movie</Button>
+            </div>
             <Row className='py-5'>
               {data2.map((show) => (
                 <Col

@@ -8,11 +8,15 @@
   height: 90vh;
 }
 .moviesSection {
-  background-color: coral;
+  background-color: #141414;
   height: 90vh;
 }
 .title {
   font-size: 30px;
   text-align: center;
-  background-color: cornflowerblue;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
