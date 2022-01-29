@@ -57,6 +57,8 @@ const MovieScreen = ({ match }) => {
           </Row>
         </Col>
       </Row>
+        <Button className='btn btn-warning'>Delete Movie</Button>
+      <Button className='btn btn-warning'>Edit Movie</Button>
     </div>
   )
 }
