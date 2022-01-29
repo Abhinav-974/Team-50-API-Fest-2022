@@ -13,8 +13,6 @@ const MainScreen = () => {
           <div className='moviesSection'>
             <div className='title'>
               Movies
-              <Button className='btn btn-warning'>Delete Movie</Button>
-              <Button className='btn btn-warning'>Edit Movie</Button>
               <Button className='btn btn-warning'>Add Movie</Button>
             </div>
             <Row className='py-5'>
@@ -34,9 +32,7 @@ const MainScreen = () => {
             </Row>
             <div className='title'>
               Shows
-              <Button className='btn btn-warning'>Delete Show</Button>
-              <Button className='btn btn-warning'>Edit Show</Button>
-              <Button className='btn btn-warning'>Add Show</Button>
+             <Button className='btn btn-warning'>Add Show</Button>
             </div>
             <Row className='py-5'>
               {data2.map((show) => (
