@@ -34,9 +34,8 @@ const MainScreen = () => {
             </Row>
             <div className='title'>
               Shows
-              <Button className='btn btn-warning'>Delete Movie</Button>
-              <Button className='btn btn-warning'>Edit Movie</Button>
-              <Button className='btn btn-warning'>Add Movie</Button>
+              <Button className='btn btn-warning'>Delete Show</Button>
+              
             </div>
             <Row className='py-5'>
               {data2.map((show) => (
