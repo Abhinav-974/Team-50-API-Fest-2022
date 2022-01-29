@@ -1,57 +1,96 @@
 const data2 = [
   {
     show_id: 1,
-    name: 'cillum sunt ea',
-    certification: 'dolore',
-    pilot_air_date: 'dolore sint dolor',
+    name: 'How I met Your Mother',
+    certification: 'U/A',
+    pilot_air_date: '19 September 2005',
     num_of_seasons: -80020245,
     cast: [
       {
-        name: 'anim aute nisi nu',
+        name: 'Josh Radnor, ',
         id: -37423586,
       },
       {
-        name: 'id',
-        id: 63836308,
+        name: 'Neil Patrick Harris, ',
+        id: 7423586,
+      },
+      {
+        name: 'Cobie Smulders, ',
+        id: 3586,
+      },
+      {
+        name: 'Jason Segel',
+        id: 636308,
       },
     ],
     genre: [
       {
-        name: 'incididunt aliqua',
-        id: 48906691,
+        name: 'Sitcom, ',
+        id: 906691,
       },
       {
-        name: 'sint',
+        name: 'Romance, ',
+        id: 4896691,
+      },
+      {
+        name: 'Comedy, ',
+        id: 4891,
+      },
+      {
+        name: 'Drama',
         id: 69170001,
+      },
+    ],
+    review: [
+      {
+        review_id: 1,
+        description: 'Funniest Sitcom',
+        stars_out_of_5: 5,
+      },
+      {
+        review_id: 2,
+        description: 'SOO SOO FUNNY!',
+        stars_out_of_5: 4,
       },
     ],
     soundtrack_link: [
       {
-        name: 'sint Ut',
-        link: 'qui',
+        name: 'The Walkmen - Heaven',
+        link: 'https://www.youtube.com/watch?v=zk-WqJl4l_Q',
       },
       {
-        name: 'eiusmod in dolore',
-        link: 'dolor',
+        name: 'Band of Horses - The Funeral',
+        link: 'https://www.youtube.com/watch?v=cMFWFhTFohk&ab_channel=SubPop',
       },
     ],
     languages_available: [
       {
-        name: 'occaecat',
+        name: 'English, ',
       },
       {
-        name: 'nulla fugiat ut no',
+        name: 'Spanish',
       },
     ],
     services_available: [
       {
-        name: 'adi',
+        name: 'Netlfix, ',
       },
       {
-        name: 'officia veniam laboris',
+        name: 'Amazon Prime',
       },
     ],
-    description: 'deserunt irure eiusm',
+    quotes: [
+      {
+        quote_id: 1,
+        quote: 'Suit Up!',
+      },
+      {
+        quote_id: 2,
+        quote: 'Haaaaave you met Ted?',
+      },
+    ],
+    description:
+      'How I Met Your Mother (often abbreviated as HIMYM) is an American sitcom, created by Craig Thomas and Carter Bays for CBS. The series, which aired from 2005 to 2014, follows the main character, Ted Mosby, and his group of friends in New York Citys Manhattan.',
     image_url:
       'https://static3.srcdn.com/wordpress/wp-content/uploads/2020/01/HIMYM-Social-Image.jpg',
   },
@@ -81,6 +120,18 @@ const data2 = [
         id: -85999755,
       },
     ],
+    review: [
+      {
+        review_id: 1,
+        description: 'good',
+        stars_out_of_5: 3,
+      },
+      {
+        review_id: 2,
+        description: 'bad',
+        stars_out_of_5: 2,
+      },
+    ],
     soundtrack_link: [
       {
         name: 'exercitation sit et quis ex',
@@ -105,6 +156,16 @@ const data2 = [
       },
       {
         name: 'irure minim eli',
+      },
+    ],
+    quotes: [
+      {
+        quote_id: 1,
+        quote: 'weee',
+      },
+      {
+        quote_id: 2,
+        quote: 'dry',
       },
     ],
     description: 'officia in',

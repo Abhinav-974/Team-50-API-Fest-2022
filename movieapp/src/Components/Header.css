@@ -1,7 +1,8 @@
 .header {
   text-align: center;
-  background-color: blanchedalmond;
+  background-color: #383838;
   height: 65px;
   line-height: 65px;
   font-size: 25px;
+  color: white;
 }

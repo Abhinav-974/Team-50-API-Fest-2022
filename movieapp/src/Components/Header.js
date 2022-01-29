@@ -3,7 +3,7 @@ import './Header.css'
 const Header = () => {
   return (
     <>
-      <div className='header'>Movie App</div>
+      <div className='header'>BingeWatchers</div>
     </>
   )
 }
