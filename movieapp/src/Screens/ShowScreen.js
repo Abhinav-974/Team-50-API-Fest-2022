@@ -55,6 +55,8 @@ const ShowScreen = ({ match }) => {
           </Row>
         </Col>
       </Row>
+        <Button className='btn btn-warning'>Delete Show</Button>
+      <Button className='btn btn-warning'>Edit Show</Button>
     </div>
   )
 }
