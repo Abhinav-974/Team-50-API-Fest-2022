@@ -26,6 +26,7 @@ const ShowScreen = ({ match }) => {
                   {r.stars_out_of_5}⭐ {r.description}
                 </p>
               ))}
+                <Button className='btn btn-warning'>Add Review</Button>
             </Col>
             <Col md={6}>
               <p>
@@ -49,6 +50,7 @@ const ShowScreen = ({ match }) => {
               {data[0].quotes.map((q) => (
                 <p>"{q.quote}"</p>
               ))}
+              <Button className='btn btn-warning'>Add Quote</Button>
             </Col>
           </Row>
         </Col>
